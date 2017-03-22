@@ -1,14 +1,11 @@
 class SessionsController < ApplicationController
+  attr_reader :access_token
   def create
-    @response = Faraday.post("https://github.com/login/oauth/access_token?client_id=#{ENV['GITHUB_KEY']}&client_secret=#{ENV['GITHUB_SECRET']}&code=#{params["code"]}")
+    github_oauth = GithubOauth.new(params['code'])
+    access_token = github_oauth.access_token
+    data = github_oauth.data
 
-    token = @response.body.split(/\W+/)[1]
-
-    oauth_response = Faraday.get("https://api.github.com/user?access_token=#{token}")
-
-    auth = JSON.parse(oauth_response.body)
-
-    user = User.from_github(auth, token)
+    user = User.from_github(data, access_token)
 
     session[:user_id] = user.id
 
