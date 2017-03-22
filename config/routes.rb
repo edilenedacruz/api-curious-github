@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   resources :dashboard, only: [:index]
 
   get '/logout', to: 'sessions#destroy'
+
+  
 end

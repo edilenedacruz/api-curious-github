@@ -8,7 +8,6 @@ class SessionsController < ApplicationController
     user = User.from_github(data, access_token)
 
     session[:user_id] = user.id
-
     redirect_to dashboard_index_path
   end
 

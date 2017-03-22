@@ -1,5 +1,13 @@
-<%= image_tag current_user.avatar %>
-<%= current_user.username %>
+<%= image_tag current_user.avatar %><br>
+
+<strong><%= @github_user.profile[:name] %></strong><br>
+<%= @github_user.profile[:login] %><br>
+
+<%= @github_user.profile[:email] %><br>
 
 
 <%= link_to "Logout", logout_path %>
+
+
+
+<!-- View basic information about my account (profile pic, number of starred repos, followers, following) -->
