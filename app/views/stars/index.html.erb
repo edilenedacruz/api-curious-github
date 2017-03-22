@@ -1,0 +1,9 @@
+<h1>Starred Repos</h1>
+<% @stars.map do |repo| %>
+  <p>Name <%= repo[:full_name] %></p>
+  <p>Description <%= repo[:description] %></p>
+  <p>url: <%= repo[:url] %></p>
+  <p>Forks <%= repo[:forks_count] %></p>
+  <p>Updated at <%= repo[:updated_at] %></p>
+  <p></p><hr>
+<% end %>

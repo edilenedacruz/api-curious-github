@@ -1,3 +1,17 @@
-<%= current_user.username %>
+<%= image_tag current_user.avatar %><br>
+
+<strong><%= @github_user.profile[:name] %></strong><br>
+<%= @github_user.profile[:login] %><br>
+
+<%= @github_user.profile[:email] %><br>
+
 
 <%= link_to "Logout", logout_path %>
+<hr>
+<%= link_to "Stars", stars_path %>
+<hr>
+<%= link_to "Followers", followers_path %>
+<%= @github_user.profile[:followers] %>
+<hr>
+<%= link_to "Following", following_index_path %>
+<%= @github_user.profile[:following] %>
