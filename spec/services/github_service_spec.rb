@@ -8,10 +8,10 @@ describe 'GithubService' do
   end
 
   describe 'starred repos' do
-    it 'finds total of your starred repos' do
-      starred = @service.find("starred_url")
+    it 'returns all starred repos' do
+      starred = @service.starred
 
-      expect(starred).to eq(47)
+      expect(starred.count).to eq(47)
     end
   end
 end
