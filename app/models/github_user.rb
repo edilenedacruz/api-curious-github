@@ -12,4 +12,12 @@ class GithubUser
     @service.get_starred
   end
 
+  def followers
+    @service.get_followers
+  end
+
+  def following
+    @service.get_following
+  end
+
 end

@@ -6,7 +6,6 @@ class SessionsController < ApplicationController
     data = github_oauth.data
 
     user = User.from_github(data, access_token)
-
     session[:user_id] = user.id
     redirect_to dashboard_index_path
   end

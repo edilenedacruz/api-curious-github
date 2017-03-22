@@ -1,1 +1,9 @@
 <h1>Following</h1>
+
+<% @following.map do |user| %>
+  <div>
+  <p><%= user[:html_url] %></p>
+  <p><%= user[:login] %><p>
+  <p><%= image_tag user[:avatar_url] %><p>
+  </div>
+<% end %>
