@@ -19,20 +19,15 @@ class GithubService
 
   def get_starred
     parse(connect.get "users/#{username}/starred")
-
   end
 
-  # def initialize
-  #   # @access_token = 'de3dbb79dc7163aee94953f025b0bd3582130d61'
-  #   @username = 'edilenedacruz'
-  #   @access_token = "de3dbb79dc7163aee94953f025b0bd3582130d61"
-  #   @connect = Faraday.get("https://api.github.com/user?access_token=de3dbb79dc7163aee94953f025b0bd3582130d61")
-  #  @auth = "?client_id=#{ENV['client_id']}&client_secret=#{ENV['client_secret']}"
-  #   # response = connection.get '/users'
-  # end
+  def get_followers
+    parse(connect.get "users/#{username}/followers")
+  end
 
-
-
+  def get_following
+    parse(connect.get "users/#{username}/following")
+  end
 
   private
 
