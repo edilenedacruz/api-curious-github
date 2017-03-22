@@ -3,6 +3,5 @@ class DashboardController < ApplicationController
 
   def index
     @github_user = GithubUser.new(current_user)
-    # GithubService.new(current_user).get_profile
   end
 end

@@ -8,5 +8,8 @@ class GithubUser
     @service.get_profile
   end
 
+  def starred
+    @service.get_starred
+  end
 
 end

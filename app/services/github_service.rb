@@ -18,7 +18,8 @@ class GithubService
   end
 
   def get_starred
-    parse(connect.get "users/#{username}/starred" )
+    parse(connect.get "users/#{username}/starred")
+
   end
 
   # def initialize

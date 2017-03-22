@@ -7,7 +7,11 @@
 
 
 <%= link_to "Logout", logout_path %>
-
-
-
-<!-- View basic information about my account (profile pic, number of starred repos, followers, following) -->
+<hr>
+<%= link_to "Stars", stars_path %>
+<hr>
+<%= link_to "Followers", followers_path %>
+<%= @github_user.profile[:followers] %>
+<hr>
+<%= link_to "Following", following_index_path %>
+<%= @github_user.profile[:following] %>
