@@ -2,8 +2,8 @@
 
 <% @followers.map do |follower| %>
   <div>
-  <%= image_tag follower[:avatar_url] %>
-  <%= follower[:login] %>
-  <%= follower[:follower_url] %>
+  <%= image_tag follower.avatar_url %>
+  <%= follower.login %>
+  <%= follower.follower_url %>
 </div>
 <% end %>

@@ -20,3 +20,6 @@
 <%= link_to "Repositories", repos_path %>
 <hr>
 <h5>Organizations</h5>
+<%= @organizations.map do |organization| %>
+  <%= image_tag organization.avatar_url %>
+<% end %>
