@@ -33,6 +33,10 @@ class GithubService
     parse(connect.get "users/#{username}/repos")
   end
 
+  def get_organizations
+    parse(connect.get "user/orgs")
+  end
+
   private
 
   def parse(response)

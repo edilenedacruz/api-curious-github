@@ -24,4 +24,8 @@ class GithubUser
     @service.get_repos
   end
 
+  def organizations
+    @service.get_organizations
+  end
+
 end

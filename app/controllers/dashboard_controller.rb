@@ -3,5 +3,6 @@ class DashboardController < ApplicationController
 
   def index
     @github_user = GithubUser.new(current_user)
+    @organizations = GithubUser.new(current_user).organizations
   end
 end
