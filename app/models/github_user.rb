@@ -14,11 +14,11 @@ class GithubUser
   end
 
   def followers
-    service.get_followers
+    Follower.followers(current_user)
   end
 
   def following
-    service.get_following
+    Following.following(current_user)
   end
 
   def repos
