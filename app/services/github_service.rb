@@ -37,8 +37,12 @@ class GithubService
     parse(connect.get "user/orgs")
   end
 
-  def get_my_recent_activity
-    parse(connect.get "users/#{usernames}/events")
+  def get_recent_activity
+    parse(connect.get "users/#{username}/events")
+  end
+
+  def get_activity_from_others
+    parse(connect.get "users/#{username}/received_events")
   end
 
   private

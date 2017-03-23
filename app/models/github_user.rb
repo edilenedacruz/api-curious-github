@@ -29,8 +29,12 @@ class GithubUser
     Organization.organizations(current_user)
   end
 
-  def my_recent_activity
-    service.get_my_recent_activity
+  def recent_events
+    Event.activities(current_user)
+  end
+
+  def activity_from_others
+    OthersEvent.activities(current_user)
   end
 
 end
