@@ -5,16 +5,20 @@ describe 'GithubService' do
 
 
   before(:each) do
+    current_user = User.new(uid: "17166293", username: "edilenedacruz", avatar: "https://avatars1.githubusercontent.com/u/17166293?v=3")
+
     @service = GithubUser.new(current_user)
+
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(current_user)
   end
 
-  describe 'starred repos' do
-    it 'returns all starred repos' do
-      VCR.use_cassette("services/NAME OF MY CHOICE")
+  describe 'get profile' do
+    it 'finds user profile information' do
+      VCR.use_cassette("services/find_profile") do
 
-        starred = @service.starred
+        profile = @service.get
 
-        expect(starred.count).to eq(47)
+        expect(profile.count).to eq(47)
     end
   end
 end
