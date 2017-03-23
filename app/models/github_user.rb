@@ -20,4 +20,8 @@ class GithubUser
     @service.get_following
   end
 
+  def repos
+    @service.get_repos
+  end
+
 end
