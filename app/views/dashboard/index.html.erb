@@ -26,10 +26,10 @@
 <hr>
 <h5>My recent activity</h5>
   <%= @github_user.recent_events.map do |activity| %>
-    <p><a href="https://www.github.com/<%= activity.repo %>"><%= activity.repo %></a>  <%= activity.event_type %>  <%= activity.created_at %>
+    <p><a href="https://www.github.com/<%= activity.repo %>"><%= activity.repo %></a>  <%= activity.event_type %>  <%= time_ago_in_words(activity.created_at) %>
   <% end %>
 <hr>
 <h5>Recent Activity from users I follow</h5>
 <%= @github_user.activity_from_others.map do |activity| %>
-  <p><a href="https://www.github.com/<%= activity.login %>" ><%= activity.login %></a>  <%= activity.type %>  <a href="https://github.com/<%= activity.repo_name %>" ><%= activity.repo_name %>  </a>  <%= activity.created_at %> </p>
+  <p><a href="https://www.github.com/<%= activity.login %>" ><%= activity.login %></a>  <%= activity.type %>  <a href="https://github.com/<%= activity.repo_name %>" ><%= activity.repo_name %>  </a>  <%= time_ago_in_words(activity.created_at) %> </p>
 <% end %>
