@@ -1,4 +1,5 @@
 class Event
+  attr_reader :event_type, :username, :repo, :created_at, :action
   def initialize(attrs = {})
     @event_type = attrs[:type]
     @username = attrs[:actor][:login]

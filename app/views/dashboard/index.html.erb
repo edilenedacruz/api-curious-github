@@ -24,9 +24,12 @@
   <%= image_tag organization.avatar_url %>
 <% end %>
 <hr>
-<%= link_to "User activity", events_path %>
+<h5>My recent activity</h5>
+  <%= @github_user.recent_events.map do |activity| %>
+    <p><a href="https://www.github.com/<%= activity.repo %>"><%= activity.repo %></a>  <%= activity.event_type %>  <%= activity.created_at %>
+  <% end %>
 <hr>
 <h5>Recent Activity from users I follow</h5>
-<%= @github_user.activity_from_others.map do |act| %>
-  <p><a href="https://www.github.com/<%= act.login %>" ><%= act.login %></a>  <%= act.type %>  <a href="https://github.com/<%= act.repo_name %>" ><%= act.repo_name %>  </a>  <%= act.created_at %> </p>
+<%= @github_user.activity_from_others.map do |activity| %>
+  <p><a href="https://www.github.com/<%= activity.login %>" ><%= activity.login %></a>  <%= activity.type %>  <a href="https://github.com/<%= activity.repo_name %>" ><%= activity.repo_name %>  </a>  <%= activity.created_at %> </p>
 <% end %>
