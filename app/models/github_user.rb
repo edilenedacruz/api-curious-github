@@ -10,7 +10,7 @@ class GithubUser
   end
 
   def starred
-    service.get_starred
+    Star.stars(current_user)
   end
 
   def followers
