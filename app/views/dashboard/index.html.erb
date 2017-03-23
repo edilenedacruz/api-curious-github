@@ -20,6 +20,13 @@
 <%= link_to "Repositories", repos_path %>
 <hr>
 <h5>Organizations</h5>
-<%= @organizations.map do |organization| %>
+<%= @github_user.organizations.map do |organization| %>
   <%= image_tag organization.avatar_url %>
+<% end %>
+<hr>
+<%= link_to "User activity", events_path %>
+<hr>
+<h5>Recent Activity from users I follow</h5>
+<%= @github_user.activity_from_others.map do |act| %>
+  <p><a href="https://www.github.com/<%= act.login %>" ><%= act.login %></a>  <%= act.type %>  <a href="https://github.com/<%= act.repo_name %>" ><%= act.repo_name %>  </a>  <%= act.created_at %> </p>
 <% end %>
