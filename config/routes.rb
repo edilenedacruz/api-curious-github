@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   resources :stars, only: [:index]
   resources :followers, only: [:index]
   resources :following, only: [:index]
+  resources :repos, only: [:index]
 end
