@@ -26,7 +26,7 @@ class GithubUser
   end
 
   def organizations
-    service.get_organizations
+    Organization.organizations(current_user)
   end
 
   def my_recent_activity
