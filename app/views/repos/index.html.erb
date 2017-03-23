@@ -1,9 +1,9 @@
 <h1>Repositories</h1>
 
 <%= @repos.each do |repo| %>
-  <p><%= repo[:html_url] %></p>
-  <p><%= repo[:name] %></p>
-  <p><%= repo[:language] %></p>
-  <p><%= repo[:updated_at] %></p>
+  <p><%= repo.html_url %></p>
+  <p><%= repo.name %></p>
+  <p><%= repo.language %></p>
+  <p><%= repo.updated_at %></p>
   <hr>
 <% end %>
