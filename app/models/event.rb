@@ -2,7 +2,7 @@ class Event
   include ActionView::Helpers::DateHelper
   attr_reader :event_type, :username, :repo, :created_at, :action
   def initialize(attrs = {})
-    @event_type = attrs[:type].split("Event")[0]
+    @event_type = attrs[:type]
     @username = attrs[:actor][:login]
     @repo = attrs[:repo][:name]
     @created_at = attrs[:created_at]

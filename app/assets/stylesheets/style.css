@@ -1,0 +1,118 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  font-family: 'Love Ya Like A Sister', cursive;
+  font-weight: 400;
+  font-size: 3em;
+  text-align: center;
+}
+h3 {
+  font-family: 'Love Ya Like A Sister', cursive;
+  text-align: center;
+}
+
+.card {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  width: 300px;
+  height: auto;
+  border-radius: 3px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+
+  .avatar {
+    border-radius: 50%;
+    width:125px;
+  }
+}
+
+.button {
+    background-color: rgb(221,75,89);
+    color:black;
+    transition-duration:0.4s;
+    cursor:pointer;
+    padding-left:1%;
+    padding-right:1%;
+    padding-top:.5%;
+    padding-bottom:.5%;
+    font-size:16px;
+    border:solid 2px black;
+    margin:10px;
+}
+.button:hover {
+    background-color:rgb(221,75,89);
+    color:black;
+    border-color:black;
+}
+
+a:link {
+  color: black;
+  text-decoration: underline;
+}
+a:active {
+  color: blue;
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.block {
+  text-align: center;
+}
+
+.return {
+  text-align: center;
+}
+
+.centered {
+  text-align: center;
+}
+
+.return-link {
+  padding-top: 90px;
+  text-align: center;
+}
+
+.links {
+  padding-top: 50px;
+}
+
+.home-main {
+  text-align: center;
+  position: fixed;
+top: 25%;
+left: 35%;
+}
+
+.avatar {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  width: 300px;
+  height: 150px;
+  width: 150px;
+  border-radius: 3px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+
+  .avatar {
+    border-radius: 50%;
+    width:125px;
+  }
+}
+
+.img-rounded {
+  width: 80px;
+  height: 80px;
+}
+
+.profile {
+  text-align: right;
+}
+
+.links {
+  text-align: center;
+}

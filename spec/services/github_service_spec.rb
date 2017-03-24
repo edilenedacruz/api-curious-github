@@ -47,6 +47,7 @@ describe 'GithubService' do
         followers = @service.followers
 
         expect(followers.count).to eq(5)
+        expect(followers).to be_an(Array)
       end
     end
   end
@@ -58,6 +59,7 @@ describe 'GithubService' do
         following = @service.following
 
         expect(following.count).to eq(3)
+        expect(following).to be_an(Array)
       end
     end
   end
@@ -69,6 +71,7 @@ describe 'GithubService' do
         repos = @service.repos
 
         expect(repos.count).to eq(51)
+        expect(repos).to be_an(Array)
       end
     end
   end
@@ -93,6 +96,7 @@ describe 'GithubService' do
 
         expect(last_event.repo).to eq("edilenedacruz/api-curious-github")
         expect(last_event.action).to eq("closed")
+        expect(events).to be_an(Array)
       end
     end
   end
@@ -106,6 +110,7 @@ describe 'GithubService' do
 
         expect(first_other.login).to eq("maxglassie")
         expect(first_other.repo_name).to eq("briancaffey/reddit-graph-analysis")
+        expect(others).to be_an(Array)
       end
     end
   end
