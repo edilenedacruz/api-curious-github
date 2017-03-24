@@ -1,0 +1,78 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/user/orgs?access_token=9111fa805beed5c97364c2bb94480db98cdf3f26
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.11.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Fri, 24 Mar 2017 01:58:38 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4998'
+      X-Ratelimit-Reset:
+      - '1490323952'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding
+      Etag:
+      - W/"0a336f85ed699a3a3b5e66cbfb125717"
+      X-Oauth-Scopes:
+      - repo
+      X-Accepted-Oauth-Scopes:
+      - admin:org, read:org, repo, user, write:org
+      X-Oauth-Client-Id:
+      - 46ac01b8c991f5f895c0
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Security-Policy:
+      - default-src 'none'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Served-By:
+      - 46808ddc41c302090177e58148908b23
+      X-Github-Request-Id:
+      - FCC4:42F2:79E4DF:9E52DC:58D47D4D
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"login":"Turing-Pahlka-Posse","id":18356491,"url":"https://api.github.com/orgs/Turing-Pahlka-Posse","repos_url":"https://api.github.com/orgs/Turing-Pahlka-Posse/repos","events_url":"https://api.github.com/orgs/Turing-Pahlka-Posse/events","hooks_url":"https://api.github.com/orgs/Turing-Pahlka-Posse/hooks","issues_url":"https://api.github.com/orgs/Turing-Pahlka-Posse/issues","members_url":"https://api.github.com/orgs/Turing-Pahlka-Posse/members{/member}","public_members_url":"https://api.github.com/orgs/Turing-Pahlka-Posse/public_members{/member}","avatar_url":"https://avatars1.githubusercontent.com/u/18356491?v=3","description":"A
+        Posse at Turing''s School of Software and Design set up to focus on projects
+        that help those around us."}]'
+    http_version: 
+  recorded_at: Fri, 24 Mar 2017 01:58:38 GMT
+recorded_with: VCR 3.0.3

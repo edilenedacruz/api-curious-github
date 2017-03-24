@@ -1,0 +1,76 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/users/edilenedacruz/followers?access_token=9111fa805beed5c97364c2bb94480db98cdf3f26
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.11.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Fri, 24 Mar 2017 00:23:54 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4976'
+      X-Ratelimit-Reset:
+      - '1490316282'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding
+      Etag:
+      - W/"a771d4576aea689c9c76a2ef656b4f10"
+      X-Oauth-Scopes:
+      - repo
+      X-Accepted-Oauth-Scopes:
+      - ''
+      X-Oauth-Client-Id:
+      - 46ac01b8c991f5f895c0
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Security-Policy:
+      - default-src 'none'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Served-By:
+      - cee4c0729c8e9147e7abcb45b9d69689
+      X-Github-Request-Id:
+      - F9F8:2291:18D49C4:1D3BB50:58D4671A
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"login":"Carmer","id":9501766,"avatar_url":"https://avatars0.githubusercontent.com/u/9501766?v=3","gravatar_id":"","url":"https://api.github.com/users/Carmer","html_url":"https://github.com/Carmer","followers_url":"https://api.github.com/users/Carmer/followers","following_url":"https://api.github.com/users/Carmer/following{/other_user}","gists_url":"https://api.github.com/users/Carmer/gists{/gist_id}","starred_url":"https://api.github.com/users/Carmer/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Carmer/subscriptions","organizations_url":"https://api.github.com/users/Carmer/orgs","repos_url":"https://api.github.com/users/Carmer/repos","events_url":"https://api.github.com/users/Carmer/events{/privacy}","received_events_url":"https://api.github.com/users/Carmer/received_events","type":"User","site_admin":false},{"login":"Cdale3","id":20077283,"avatar_url":"https://avatars0.githubusercontent.com/u/20077283?v=3","gravatar_id":"","url":"https://api.github.com/users/Cdale3","html_url":"https://github.com/Cdale3","followers_url":"https://api.github.com/users/Cdale3/followers","following_url":"https://api.github.com/users/Cdale3/following{/other_user}","gists_url":"https://api.github.com/users/Cdale3/gists{/gist_id}","starred_url":"https://api.github.com/users/Cdale3/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Cdale3/subscriptions","organizations_url":"https://api.github.com/users/Cdale3/orgs","repos_url":"https://api.github.com/users/Cdale3/repos","events_url":"https://api.github.com/users/Cdale3/events{/privacy}","received_events_url":"https://api.github.com/users/Cdale3/received_events","type":"User","site_admin":false},{"login":"meyerhoferc","id":12058063,"avatar_url":"https://avatars2.githubusercontent.com/u/12058063?v=3","gravatar_id":"","url":"https://api.github.com/users/meyerhoferc","html_url":"https://github.com/meyerhoferc","followers_url":"https://api.github.com/users/meyerhoferc/followers","following_url":"https://api.github.com/users/meyerhoferc/following{/other_user}","gists_url":"https://api.github.com/users/meyerhoferc/gists{/gist_id}","starred_url":"https://api.github.com/users/meyerhoferc/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/meyerhoferc/subscriptions","organizations_url":"https://api.github.com/users/meyerhoferc/orgs","repos_url":"https://api.github.com/users/meyerhoferc/repos","events_url":"https://api.github.com/users/meyerhoferc/events{/privacy}","received_events_url":"https://api.github.com/users/meyerhoferc/received_events","type":"User","site_admin":false},{"login":"maxglassie","id":19553401,"avatar_url":"https://avatars2.githubusercontent.com/u/19553401?v=3","gravatar_id":"","url":"https://api.github.com/users/maxglassie","html_url":"https://github.com/maxglassie","followers_url":"https://api.github.com/users/maxglassie/followers","following_url":"https://api.github.com/users/maxglassie/following{/other_user}","gists_url":"https://api.github.com/users/maxglassie/gists{/gist_id}","starred_url":"https://api.github.com/users/maxglassie/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/maxglassie/subscriptions","organizations_url":"https://api.github.com/users/maxglassie/orgs","repos_url":"https://api.github.com/users/maxglassie/repos","events_url":"https://api.github.com/users/maxglassie/events{/privacy}","received_events_url":"https://api.github.com/users/maxglassie/received_events","type":"User","site_admin":false},{"login":"pixapi","id":20365127,"avatar_url":"https://avatars2.githubusercontent.com/u/20365127?v=3","gravatar_id":"","url":"https://api.github.com/users/pixapi","html_url":"https://github.com/pixapi","followers_url":"https://api.github.com/users/pixapi/followers","following_url":"https://api.github.com/users/pixapi/following{/other_user}","gists_url":"https://api.github.com/users/pixapi/gists{/gist_id}","starred_url":"https://api.github.com/users/pixapi/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/pixapi/subscriptions","organizations_url":"https://api.github.com/users/pixapi/orgs","repos_url":"https://api.github.com/users/pixapi/repos","events_url":"https://api.github.com/users/pixapi/events{/privacy}","received_events_url":"https://api.github.com/users/pixapi/received_events","type":"User","site_admin":false}]'
+    http_version: 
+  recorded_at: Fri, 24 Mar 2017 00:23:54 GMT
+recorded_with: VCR 3.0.3
