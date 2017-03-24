@@ -1,7 +1,7 @@
 class Star
   attr_reader :full_name, :description, :url, :forks_count, :updated_at
   def initialize(attrs = {})
-    @full_name = attrs[:fullname]
+    @full_name = attrs[:full_name]
     @description = attrs[:description]
     @url = attrs[:url]
     @forks_count = attrs[:forks_count]

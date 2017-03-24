@@ -1,9 +1,9 @@
 class Follower
-  attr_reader :avatar_url, :login, :follower_url
+  attr_reader :avatar_url, :login, :html_url
   def initialize(attrs = {})
     @avatar_url = attrs[:avatar_url]
     @login = attrs[:login]
-    @follower_url = attrs[:follower_url]
+    @html_url = attrs[:html_url]
   end
 
   def self.followers(current_user)

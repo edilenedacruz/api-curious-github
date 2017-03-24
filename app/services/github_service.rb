@@ -34,7 +34,7 @@ class GithubService
   end
 
   def get_organizations
-    parse(connect.get "user/orgs")
+      parse(connect.get "user/orgs")
   end
 
   def get_recent_activity
