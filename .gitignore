@@ -12,6 +12,12 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+/config/application.yml
+/spec/cassettes
+
+/config/secrets.yml
+
+/coverage
 
 # Ignore Byebug command history file.
 .byebug_history
