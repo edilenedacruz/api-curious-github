@@ -73,6 +73,6 @@ http_interactions:
       string: '[{"login":"Turing-Pahlka-Posse","id":18356491,"url":"https://api.github.com/orgs/Turing-Pahlka-Posse","repos_url":"https://api.github.com/orgs/Turing-Pahlka-Posse/repos","events_url":"https://api.github.com/orgs/Turing-Pahlka-Posse/events","hooks_url":"https://api.github.com/orgs/Turing-Pahlka-Posse/hooks","issues_url":"https://api.github.com/orgs/Turing-Pahlka-Posse/issues","members_url":"https://api.github.com/orgs/Turing-Pahlka-Posse/members{/member}","public_members_url":"https://api.github.com/orgs/Turing-Pahlka-Posse/public_members{/member}","avatar_url":"https://avatars1.githubusercontent.com/u/18356491?v=3","description":"A
         Posse at Turing''s School of Software and Design set up to focus on projects
         that help those around us."}]'
-    http_version: 
+    http_version:
   recorded_at: Fri, 24 Mar 2017 01:58:38 GMT
 recorded_with: VCR 3.0.3

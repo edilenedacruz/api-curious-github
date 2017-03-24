@@ -19,3 +19,7 @@
 # Ignore application configuration
 /config/application.yml
 /spec/cassettes
+
+/config/secrets.yml
+
+/coverage
