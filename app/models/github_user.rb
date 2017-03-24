@@ -7,7 +7,6 @@ class GithubUser
 
   def profile
     service.get_profile
-    binding.pry
   end
 
   def starred
