@@ -16,8 +16,6 @@
 /spec/cassettes
 /config/application.yml
 
-/config/secrets.yml
-
 
 
 # Ignore Byebug command history file.
@@ -26,8 +24,8 @@
 # Ignore application configuration
 /config/application.yml
 
-
 /config/secrets.yml
+
 
 /coverage
 /spec/cassettes

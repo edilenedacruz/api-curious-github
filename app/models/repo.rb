@@ -12,4 +12,10 @@ class Repo
       Repo.new(raw_repo)
     end
   end
+
+  def self.repo_names(current_user)
+    GithubService.new(current_user).get_repos.map do |repo|
+      repo[:name]
+    end
+  end
 end

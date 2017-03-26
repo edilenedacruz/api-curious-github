@@ -38,11 +38,15 @@ class GithubService
   end
 
   def get_recent_activity
-    parse(connect.get "users/#{username}/events")
+    parse(connect.get "users/#{username}/events").first(30)
   end
 
   def get_activity_from_others
-    parse(connect.get "users/#{username}/received_events")
+    parse(connect.get "users/#{username}/received_events").first(30)
+  end
+
+  def get_recent_commits(repo_name)
+    parse(connect.get "repos/#{username}/#{repo_name}/commits")
   end
 
   private

@@ -12,6 +12,6 @@ class Event
   def self.activities(current_user)
     GithubService.new(current_user).get_recent_activity.map do |activity|
       Event.new(activity)
-    end
+    end.take(30)
   end
 end
