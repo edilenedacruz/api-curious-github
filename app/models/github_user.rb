@@ -37,4 +37,8 @@ class GithubUser
     OthersEvent.activities(current_user)
   end
 
+  def recent_commits
+    Commit.recent_commits(current_user)
+  end
+
 end
