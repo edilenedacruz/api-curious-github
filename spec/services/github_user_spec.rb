@@ -1,8 +1,7 @@
 require 'rails_helper'
 
-describe 'GithubService' do
+RSpec.describe 'GithubService' do
   attr_reader :service
-
 
   before(:each) do
     current_user = User.new(uid: "17166293", username: "edilenedacruz", avatar: "https://avatars1.githubusercontent.com/u/17166293?v=3", token: ENV['TOKEN'])
@@ -14,10 +13,10 @@ describe 'GithubService' do
   end
 
   describe 'get profie' do
-    xit 'finds user profile information' do
+    it 'finds user profile information' do
       VCR.use_cassette("services/find_profile") do
 
-        profile = @service
+        profile = @service.profile
 
         expect(profile[:login]).to eq("edilenedacruz")
         expect(profile[:avatar_url]).to eq("https://avatars1.githubusercontent.com/u/17166293?v=3")
@@ -28,13 +27,13 @@ describe 'GithubService' do
   end
 
   describe 'get starred' do
-    xit 'finds users starred repositories' do
+    it 'finds users starred repositories' do
       VCR.use_cassette("services/find_starred") do
 
       starred = @service.starred
       first_star = starred.first
 
-      expect(starred.count).to eq(48)
+      expect(starred.count).to eq(30)
       expect(first_star.url).to eq("https://api.github.com/repos/s-espinosa/guaranty_records")
       end
     end
@@ -65,12 +64,12 @@ describe 'GithubService' do
   end
 
   describe 'repos' do
-    xit 'finds all repositories for user' do
+    it 'finds all repositories for user' do
       VCR.use_cassette("services/find_repos") do
 
         repos = @service.repos
 
-        expect(repos.count).to eq(51)
+        expect(repos.count).to eq(30)
         expect(repos).to be_an(Array)
       end
     end
@@ -95,7 +94,6 @@ describe 'GithubService' do
         last_event = events.last
 
         expect(last_event.repo).to eq("edilenedacruz/api-curious-github")
-        expect(last_event.action).to eq("closed")
         expect(events).to be_an(Array)
       end
     end

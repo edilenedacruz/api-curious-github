@@ -1,6 +1,5 @@
 <div class="home-main">
   <center><img src="https://octodex.github.com/images/original.png" height="300" width="300"></center>
   <h1>Api Curious Github</h1>
-  <%= link_to "Login",
-"https://github.com/login/oauth/authorize?client_id=#{ENV['GITHUB_KEY']}&scope=repo", class: "button" %>
+  <%= link_to 'Login'.html_safe, "http://github.com/login/oauth/authorize?client_id=#{Figaro.env.GITHUB_KEY}&scope=repo", class: "button" %>
 </div>

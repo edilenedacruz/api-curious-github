@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.github.com/user?access_token
+    uri: https://api.github.com/user?access_token=90dd49b711d3d28773137c23e7068b65809e78a8
     body:
       encoding: US-ASCII
       string: ''
@@ -15,27 +15,42 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 401
-      message: Unauthorized
+      code: 200
+      message: OK
     headers:
       Server:
       - GitHub.com
       Date:
-      - Thu, 23 Mar 2017 23:51:35 GMT
+      - Sun, 26 Mar 2017 05:06:35 GMT
       Content-Type:
       - application/json; charset=utf-8
-      Content-Length:
-      - '83'
+      Transfer-Encoding:
+      - chunked
       Status:
-      - 401 Unauthorized
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4983'
+      X-Ratelimit-Reset:
+      - '1490507282'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding
+      Etag:
+      - W/"df1cf02d7571d18e8ed9874e27dea056"
+      Last-Modified:
+      - Sat, 25 Mar 2017 00:41:30 GMT
+      X-Oauth-Scopes:
+      - repo
+      X-Accepted-Oauth-Scopes:
+      - ''
+      X-Oauth-Client-Id:
+      - 46ac01b8c991f5f895c0
       X-Github-Media-Type:
       - github.v3; format=json
-      X-Ratelimit-Limit:
-      - '60'
-      X-Ratelimit-Remaining:
-      - '0'
-      X-Ratelimit-Reset:
-      - '1490314424'
       Access-Control-Expose-Headers:
       - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
         X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
@@ -51,11 +66,13 @@ http_interactions:
       - deny
       X-Xss-Protection:
       - 1; mode=block
+      X-Served-By:
+      - d0b3c2c33a23690498aa8e70a435a259
       X-Github-Request-Id:
-      - F7C0:2293:23AE695:2A1696F:58D45F87
+      - 27A1:3545:2F8B8F8:3B7C67D:58D74C5B
     body:
-      encoding: UTF-8
-      string: '{"message":"Bad credentials","documentation_url":"https://developer.github.com/v3"}'
+      encoding: ASCII-8BIT
+      string: '{"login":"edilenedacruz","id":17166293,"avatar_url":"https://avatars1.githubusercontent.com/u/17166293?v=3","gravatar_id":"","url":"https://api.github.com/users/edilenedacruz","html_url":"https://github.com/edilenedacruz","followers_url":"https://api.github.com/users/edilenedacruz/followers","following_url":"https://api.github.com/users/edilenedacruz/following{/other_user}","gists_url":"https://api.github.com/users/edilenedacruz/gists{/gist_id}","starred_url":"https://api.github.com/users/edilenedacruz/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/edilenedacruz/subscriptions","organizations_url":"https://api.github.com/users/edilenedacruz/orgs","repos_url":"https://api.github.com/users/edilenedacruz/repos","events_url":"https://api.github.com/users/edilenedacruz/events{/privacy}","received_events_url":"https://api.github.com/users/edilenedacruz/received_events","type":"User","site_admin":false,"name":"Edilene","company":null,"blog":null,"location":null,"email":"hello@edilene.io","hireable":true,"bio":null,"public_repos":51,"public_gists":9,"followers":5,"following":3,"created_at":"2016-02-10T19:17:20Z","updated_at":"2017-03-25T00:41:30Z"}'
     http_version: 
-  recorded_at: Thu, 23 Mar 2017 23:51:35 GMT
+  recorded_at: Sun, 26 Mar 2017 05:06:35 GMT
 recorded_with: VCR 3.0.3

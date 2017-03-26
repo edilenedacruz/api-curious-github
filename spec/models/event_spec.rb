@@ -9,15 +9,19 @@ RSpec.describe Event, :type => :model do
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(current_user)
   end
 
-  xit "should have attributes" do
+  it "should have attributes" do
     VCR.use_cassette("models/all_events") do
 
       events = Event.activities(current_user)
       first_event = events.first
 
-      expect(event.class).to be(Event)
-      expect(events.class).to be_an(Array)
-      expet(event.event_type).to eq("")
+      expect(first_event.class).to be(Event)
+      expect(first_event.event_type).to eq("DeleteEvent")
+      expect(first_event.username).to eq("edilenedacruz")
+      expect(first_event.repo).to eq("edilenedacruz/api-curious-github")
+      expect(first_event.created_at).to eq("2017-03-24T06:10:32Z")
+      expect(first_event.action).to be_nil
+
     end
   end
 end
