@@ -20,7 +20,7 @@
 <% end %>
 </center>
 <hr>
-<h3>Recent commits</h3>
+<h3>My recent commits</h3>
 <%= @github_user.recent_commits.map do |commits| %>
   <%= current_user.username + "/" + commits.keys[0] + "  #{commits.values.flatten.count}" + " commits" %><br>
 <% end %>

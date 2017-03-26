@@ -21,7 +21,6 @@ RSpec.describe Event, :type => :model do
       expect(first_event.repo).to eq("edilenedacruz/api-curious-github")
       expect(first_event.created_at).to eq("2017-03-24T06:10:32Z")
       expect(first_event.action).to be_nil
-
     end
   end
 end
