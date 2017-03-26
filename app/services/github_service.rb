@@ -1,5 +1,5 @@
 class GithubService
-  attr_reader :auth, :username, :access_token, :connect
+  attr_reader :auth, :username, :access_token, :connect, :auth
 
   def initialize(current_user)
     @username = current_user.username

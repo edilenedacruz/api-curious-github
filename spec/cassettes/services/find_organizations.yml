@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.github.com/user/orgs?access_token=9111fa805beed5c97364c2bb94480db98cdf3f26
+    uri: https://api.github.com/user/orgs?access_token=90dd49b711d3d28773137c23e7068b65809e78a8
     body:
       encoding: US-ASCII
       string: ''
@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Fri, 24 Mar 2017 01:58:38 GMT
+      - Sun, 26 Mar 2017 05:06:37 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -31,9 +31,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4998'
+      - '4978'
       X-Ratelimit-Reset:
-      - '1490323952'
+      - '1490507282'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
@@ -65,14 +65,14 @@ http_interactions:
       X-Xss-Protection:
       - 1; mode=block
       X-Served-By:
-      - 46808ddc41c302090177e58148908b23
+      - 0e17b94a265a427d9cafe798ceea7c02
       X-Github-Request-Id:
-      - FCC4:42F2:79E4DF:9E52DC:58D47D4D
+      - 27B3:3545:2F8B9E7:3B7C793:58D74C5D
     body:
       encoding: ASCII-8BIT
       string: '[{"login":"Turing-Pahlka-Posse","id":18356491,"url":"https://api.github.com/orgs/Turing-Pahlka-Posse","repos_url":"https://api.github.com/orgs/Turing-Pahlka-Posse/repos","events_url":"https://api.github.com/orgs/Turing-Pahlka-Posse/events","hooks_url":"https://api.github.com/orgs/Turing-Pahlka-Posse/hooks","issues_url":"https://api.github.com/orgs/Turing-Pahlka-Posse/issues","members_url":"https://api.github.com/orgs/Turing-Pahlka-Posse/members{/member}","public_members_url":"https://api.github.com/orgs/Turing-Pahlka-Posse/public_members{/member}","avatar_url":"https://avatars1.githubusercontent.com/u/18356491?v=3","description":"A
         Posse at Turing''s School of Software and Design set up to focus on projects
         that help those around us."}]'
-    http_version:
-  recorded_at: Fri, 24 Mar 2017 01:58:38 GMT
+    http_version: 
+  recorded_at: Sun, 26 Mar 2017 05:06:37 GMT
 recorded_with: VCR 3.0.3

@@ -9,9 +9,9 @@
   <br><br>
   </div>
   <div class="links">
-    <%= link_to "Stars", stars_path %> - <%= link_to "Followers", followers_path %>
-    <%= @github_user.profile[:followers] %> - <%= link_to "Following", following_index_path %>
-    <%= @github_user.profile[:following] %> - <%= link_to "Repositories", repos_path %>
+    <%= link_to "Stars", user_stars_path(current_user) %> - <%= link_to "Followers", user_followers_path(current_user) %>
+    <%= @github_user.profile[:followers] %> - <%= link_to "Following", user_following_path(current_user) %>
+    <%= @github_user.profile[:following] %> - <%= link_to "Repositories", user_repos_path(current_user) %>
     <hr>
 </div>
 <h3>Organizations</h3>
@@ -25,7 +25,7 @@
     <p><a href="https://www.github.com/<%= activity.repo %>"><%= activity.repo %></a>  <%= activity.event_type %>  <%= time_ago_in_words(activity.created_at) %> ago
   <% end %>
 <hr>
-<h3>Recent Activity from users I follow</h3>
+<h3>Recent activity from users I follow</h3>
 <%= @github_user.activity_from_others.map do |activity| %>
   <p><a href="https://www.github.com/<%= activity.login %>" ><%= activity.login %></a>  <%= activity.type %>  <a href="https://github.com/<%= activity.repo_name %>" ><%= activity.repo_name %>  </a>  <%= time_ago_in_words(activity.created_at) %> ago </p>
 <% end %>
