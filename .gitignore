@@ -27,5 +27,5 @@
 /config/secrets.yml
 
 
-/coverage
+
 /spec/cassettes
