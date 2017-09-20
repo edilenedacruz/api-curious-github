@@ -21,17 +21,17 @@
 </center>
 <hr>
 <h3>My recent commits</h3>
-<%= @github_user.recent_commits.map do |commits| %>
+<% @github_user.recent_commits.map do |commits| %>
   <%= current_user.username + "/" + commits.keys[0] + "  #{commits.values.flatten.count}" + " commits" %><br>
 <% end %>
 <hr>
 <h3>My recent activity</h3>
-  <%= @github_user.recent_events.map do |activity| %>
+  <% @github_user.recent_events.map do |activity| %>
     <p><a href="https://www.github.com/<%= activity.repo %>"><%= activity.repo %></a>  <%= activity.event_type %>  <%= time_ago_in_words(activity.created_at) %> ago
   <% end %>
 <hr>
 <h3>Recent activity from users I follow</h3>
-<%= @github_user.activity_from_others.map do |activity| %>
+<% @github_user.activity_from_others.map do |activity| %>
   <p><a href="https://www.github.com/<%= activity.login %>" ><%= activity.login %></a>  <%= activity.type %>  <a href="https://github.com/<%= activity.repo_name %>" ><%= activity.repo_name %>  </a>  <%= time_ago_in_words(activity.created_at) %> ago </p>
 <% end %>
 </div>
